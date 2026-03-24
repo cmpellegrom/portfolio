@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Research | Chase Pellegrom</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="hero">
+      <nav class="navbar">
+        <h1>Chase Pellegrom</h1>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="index.html#resume">Resume</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="hero-content">
+        <h2>Research</h2>
+        <p>
+          I am currently working as an undergraduate research assistant under
+          Dr. Xiaolei Guo at the Colorado School of Mines. My work involves
+          weekly meetings, testing samples, and supporting ongoing research.
+        </p>
+        <p>
+          Learn more about the group here:
+          <a
+            href="https://sites.google.com/view/colorado-corrosion-center"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="special-link"
+            >Colorado Corrosion Center</a
+          >
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section id="research" class="section">
+        <h3>Research</h3>
+        <p class="section-intro">Click a research topic to read more.</p>
+
+        <div class="projects-grid">
+          <div
+            class="project-card"
+            onclick="openModal(
+              'Durability of Past, Present, and Future Concrete Formulations in Coastal Environments',
+              'Coastal infrastructure faces escalating risks from climate-driven sea-level rise and more frequent flooding, challenging the longevity of conventional building materials. Ensuring the durability of concrete under these harsh, cyclic exposure conditions is essential for resilient, sustainable design. The goal of this project is to evaluate the corrosion resistance of both historical and modern concrete mixtures, including those formulated with ordinary Portland cement and emerging next-generation binders, under laboratory-simulated coastal environments that replicate rising seas and recurrent inundation.'
+            )"
+          >
+            <h4>
+              Durability of Past, Present, and Future Concrete Formulations in
+              Coastal Environments
+            </h4>
+            <p>
+              Conducting electrochemical testing and analyzing corrosion
+              behavior of reinforced concrete specimens using laboratory
+              instrumentation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <p class="section-intro">
+          I’m adding more research projects — check back soon.
+        </p>
+      </section>
+    </main>
+
+    <div
+      id="projectModal"
+      class="modal"
+      onclick="closeModal(event)"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <span class="close-button" onclick="closeModal()" aria-label="Close modal"
+          >&times;</span
+        >
+        <h3 id="modalTitle"></h3>
+        <p id="modalDescription"></p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Chase Pellegrom</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="hero">
+      <nav class="navbar">
+        <h1>Chase Pellegrom</h1>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="index.html#resume">Resume</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="hero-content">
+        <h2>Projects</h2>
+        <p>
+          “Tell me and I forget. Teach me and I remember. Involve me and I
+          learn.”
+          <br />
+          — Benjamin Franklin
+        </p>
+
+        <p>
+          For every class, I make an effort to complete a project that allows me
+          to apply the knowledge and skills I have developed. Below is a
+          selection of academic and personal projects that have contributed to
+          my understanding and mastery of these subjects.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section id="projects" class="section">
+        <h3>Projects</h3>
+        <p class="section-intro">Click a project to read more.</p>
+
+        <div class="projects-grid">
+          <div
+            class="project-card"
+            onclick="openModal(
+              'Sustainable Packaging Redesign',
+              'As recycling practices function today, less than 5% of plastic waste is recycled, while 86% ends up in landfills, much of it from non-biodegradable packaging materials. The team set out to design a solution that would reduce the waste produced by these materials. This project involved stakeholder interviews, field research, identifying key components and subsystems, CAD design drafts, risk mitigation, and concept validation.',
+              'projects-page/Pellegrom C. Sustainable Packaging Redesign.zip'
+            )"
+          >
+            <h4>Sustainable Packaging Redesign</h4>
+            <p>Lower-waste packaging design using sustainable materials.</p>
+          </div>
+
+          <div
+            class="project-card"
+            onclick="openModal(
+              'Analysis of CO₂ Levels Over Time',
+              'Analyzed the Mauna Loa CO₂ record (1958–present) using fast Fourier transform (FFT) and regression to evaluate whether atmospheric CO₂ growth is linear or quadratic. Tasks included data cleaning, spectral analysis, model fitting, and hypothesis testing.',
+              'projects-page/Pellegrom C. Analysis of CO2 Levels Over Time.pdf'
+            )"
+          >
+            <h4>Analysis of CO₂ Levels Over Time</h4>
+            <p>Statistical and spectral analysis of long-term CO₂ records.</p>
+          </div>
+
+          <div
+            class="project-card"
+            onclick="openModal(
+              'Stock Market Performance After VIX Spikes',
+              'Examined stock returns after significant VIX spikes to identify typical short- and medium-term patterns. Methodology included event selection, return calculations, bootstrap tests, and interpretation of market behavior.',
+              'projects-page/Pellegrom C. Stock Market Performance After VIX Spikes.pdf',
+              'projects-page/Pellegrom C. Stock Market Performance After VIX Spikes.zip'
+            )"
+          >
+            <h4>Stock Market Performance After VIX Spikes</h4>
+            <p>Study of S&amp;P 500 returns after VIX spikes.</p>
+          </div>
+
+          <div
+            class="project-card"
+            onclick="openModal(
+              'NaOH Standardization via KHP Titration',
+              'Laboratory standardization of NaOH using KHP as a primary standard, including titration data, calculations, and uncertainty analysis. A full report for this project will be available soon.'
+            )"
+          >
+            <h4>NaOH Standardization via KHP Titration</h4>
+            <p>Standardizing NaOH by titration with KHP.</p>
+          </div>
+
+          <div
+            class="project-card"
+            onclick="openModal(
+              'Physical Control for Construction Robotics',
+              'Design and implement distributed control for construction robotics, focusing on real-time wireless sensing, coordination, and actuation in simulated environments. This project is in progress, and a full report will be available when it is complete.'
+            )"
+          >
+            <h5><b>IN PROGRESS</b></h5>
+            <h4>Physical Control for Construction Robotics</h4>
+            <p>Multi-sensor wireless control for construction robots.</p>
+          </div>
+
+          <div
+            class="project-card"
+            onclick="openModal(
+              'Aluminum Derby Car Design',
+              'Developed chassis geometry, fastening strategies, and a manufacturing plan with attention to geometry, manufacturability, and assembly tradeoffs. This project is in progress, and a full report will be available when it is complete.'
+            )"
+          >
+            <h5><b>IN PROGRESS</b></h5>
+            <h4>Aluminum Derby Car Design</h4>
+            <p>Design and fabricate an aluminum derby car chassis.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <p class="section-intro">I’m adding more projects — check back soon.</p>
+      </section>
+    </main>
+
+    <div
+      id="projectModal"
+      class="modal"
+      onclick="closeModal(event)"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <span class="close-button" onclick="closeModal()" aria-label="Close modal"
+          >&times;</span
+        >
+        <h3 id="modalTitle"></h3>
+        <p id="modalDescription"></p>
+
+        <div class="modal-buttons">
+          <a
+            id="modalPdfLink"
+            class="modal-button"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="display: none;"
+          >
+            Read full report
+          </a>
+
+          <a
+            id="modalZipLink"
+            class="modal-button"
+            href="#"
+            download
+            style="display: none;"
+          >
+            Download project files
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
